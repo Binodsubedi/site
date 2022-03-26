@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  font-weight: 400;
+  line-height: 0.9rem;
+  letter-spacing: 0.3rem;
+  font-size: medium;
+  font-family: 'Zen Dots', cursive;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: initial;
+}
+
+:root {
+  --color-primary: #d16ba5;
+  --color-primary-m: hsla(326, 53%, 62%, 0.4);
+  --color-secondary: #86a8e7;
+  --color-secondary-m: hsla(219, 67%, 72%, 0.6);
+  --color-tertiary: #5ffbf1;
+  --color-tertiary-m: hsla(176, 95%, 68%, 0.6);
+  --color-quinary: #fff;
+}
+
+.AbContainer {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.67rem) [col-end]) [center-end] 1fr [container-end];
+  grid-template-rows: 12vh 88vh repeat(4, min-content);
+  background-image: linear-gradient(90deg, var(--color-primary-m), var(--color-secondary), var(--color-tertiary));
+}
+
+.AbHeader {
+  grid-column: container-start/ container-end;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.4rem;
+}
+
+.AbHeader a {
+  padding: 0.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  border: 0.2rem var(--color-secondary) solid;
+  position: relative;
+  z-index: 1;
+}
+
+.AbHeader a:link::before,
+.AbHeader a:visited::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: aquamarine;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.AbHeader a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.AbIntro {
+  grid-column: container-start / container-end;
+  background-color: var(--color-secondary);
+}
+
+.AbProgrammingLang {
+  grid-column: center-start / center-end;
+  background-color: var(--color-tertiary);
+  height: 400px;
+}
+
+.AbExperience {
+  grid-column: container-start / container-end;
+  background-color: var(--color-primary);
+  height: 400px;
+}
+
+.AbExtras {
+  grid-column: center-start / center-end;
+  background-color: var(--color-secondary);
+  height: 400px;
+}
+
+.AbFooter {
+  grid-column: container-start / container-end;
+  background-color: var(--color-tertiary);
+  height: 200px;
+}
+/*# sourceMappingURL=about.css.map */
