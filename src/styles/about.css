@@ -13,7 +13,7 @@ html {
 
 p {
   font-weight: 400;
-  line-height: 0.9rem;
+  line-height: 4rem;
   letter-spacing: 0.3rem;
   font-size: medium;
   font-family: 'Zen Dots', cursive;
@@ -89,18 +89,245 @@ a:hover {
 .AbIntro {
   grid-column: container-start / container-end;
   background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AbIntro__content {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 10rem;
+  justify-content: flex-start;
+}
+
+.AbIntro__content--quotes-open, .AbIntro__content--quotes-close {
+  font-size: 10rem;
+  color: var(--color-tertiary);
+}
+
+.AbIntro__content--data {
+  padding: 1rem 0 0 calc(1rem + 2vw);
+}
+
+.AbIntro__content--quotes-close {
+  align-self: flex-end;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .AbIntro__content {
+    padding: 6rem 5rem;
+  }
+  .AbIntro__content--quotes-open, .AbIntro__content--quotes-close {
+    font-size: 6rem;
+  }
+  .AbIntro__content--data {
+    line-height: 2rem;
+  }
 }
 
 .AbProgrammingLang {
   grid-column: center-start / center-end;
   background-color: var(--color-tertiary);
-  height: 400px;
+  display: grid;
+  grid-template-rows: 14rem calc(100% - 14rem);
+  padding: 5rem 3rem;
+}
+
+.AbProgrammingLang__title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 4rem;
+  border: 0.4rem var(--color-primary-m) solid;
+  place-self: center;
+  padding: 3rem;
+}
+
+.AbProgrammingLang__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 4rem;
+  justify-items: center;
+  padding: 4vw;
+  border: 0.4rem var(--color-secondary) solid;
+  margin-top: 4rem;
+}
+
+.AbProgrammingLang__content .AbProgLangImg1 {
+  background-image: url("./../images/1.png");
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.AbProgrammingLang__content .AbProgLangImg2 {
+  background-image: url("./../images/2.png");
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.AbProgrammingLang__content .AbProgLangImg3 {
+  background-image: url("./../images/3.png");
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.AbProgrammingLang__content .AbProgLangImg4 {
+  background-image: url("./../images/4.png");
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.AbProgrammingLang__content .AbProgLangImg5 {
+  background-image: url("./../images/5.png");
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.AbProgrammingLang__content .AbProgLangImg6 {
+  background-image: url("./../images/6.png");
+  width: 30rem;
+  height: 30rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .AbExperience {
   grid-column: container-start / container-end;
   background-color: var(--color-primary);
-  height: 400px;
+}
+
+.AbExperience__title {
+  text-align: center;
+  color: #80ffd4;
+  font-size: 6rem;
+  padding: 2rem 0;
+}
+
+.AbExperience__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  place-items: center;
+  padding: 6rem 2vw 6rem 5vw;
+}
+
+.AbExperience__content--singles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AbExperience__content--singles__img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--color-tertiary);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  margin-right: 2rem;
+  position: relative;
+}
+
+.AbExperience__content--singles__box {
+  height: 3rem;
+  width: 25rem;
+  border: 0.2rem var(--color-secondary) solid;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.AbExperience__content--singles__box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--color-tertiary);
+  border-radius: 1rem;
+}
+
+.AbExperience__content .AbExperience__img-1 {
+  background-image: url("./../images/1.png");
+}
+
+.AbExperience__content .AbExperience__img-2 {
+  background-image: url("./../images/2.png");
+}
+
+.AbExperience__content .AbExperience__img-3 {
+  background-image: url("./../images/3.png");
+}
+
+.AbExperience__content .AbExperience__img-4 {
+  background-image: url("./../images/4.png");
+}
+
+.AbExperience__content .AbExperience__img-5 {
+  background-image: url("./../images/5.png");
+}
+
+.AbExperience__content .AbExperience__img-6 {
+  background-image: url("./../images/6.png");
+}
+
+.AbExperience__content .AbExperience__box-1::before {
+  animation: box-1 4s infinite;
+}
+
+.AbExperience__content .AbExperience__box-2::before {
+  animation: box-2 4s infinite;
+}
+
+.AbExperience__content .AbExperience__box-3::before {
+  animation: box-3 4s infinite;
+}
+
+.AbExperience__content .AbExperience__box-4::before {
+  animation: box-4 4s infinite;
+}
+
+.AbExperience__content .AbExperience__box-5::before {
+  animation: box-5 4s infinite;
+}
+
+.AbExperience__content .AbExperience__box-6::before {
+  animation: box-6 4s infinite;
 }
 
 .AbExtras {
@@ -113,5 +340,59 @@ a:hover {
   grid-column: container-start / container-end;
   background-color: var(--color-tertiary);
   height: 200px;
+}
+
+@keyframes box-1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 86%;
+  }
+}
+
+@keyframes box-2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 76%;
+  }
+}
+
+@keyframes box-3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes box-4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+@keyframes box-5 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+@keyframes box-6 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=about.css.map */
