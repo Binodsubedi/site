@@ -357,13 +357,107 @@ a:hover {
 .AbExtras {
   grid-column: center-start / center-end;
   background-color: var(--color-secondary);
-  height: 400px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-row-gap: 2rem;
+  padding: 2rem 4vw 3rem;
+}
+
+.AbExtras__title {
+  font-size: 6rem;
+  color: #800000;
+  text-align: center;
+}
+
+.AbExtras__Books {
+  padding: 1rem;
+}
+
+.AbExtras__Books--title {
+  font-size: 4rem;
+  color: var(--color-tertiary);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.AbExtras__Books--content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  place-items: center;
+  grid-row-gap: 3rem;
+}
+
+.AbExtras__Books--content__card {
+  height: 22rem;
+  width: 20rem;
+  background-color: #283c86;
+  clip-path: polygon(0% 10%, 40% 10%, 50% 0%, 60% 10%, 100% 10%, 100% 80%, 50% 100%, 0% 80%);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.AbExtras__Books--content .AbExtras__Books-1 {
+  background-image: url("./../images/books/1.png");
+}
+
+.AbExtras__Books--content .AbExtras__Books-2 {
+  background-image: url("./../images/books/2.png");
+}
+
+.AbExtras__Books--content .AbExtras__Books-3 {
+  background-image: url("./../images/books/3.png");
+}
+
+.AbExtras__Interests {
+  padding: 1rem;
+}
+
+.AbExtras__Interests--title {
+  font-size: 4rem;
+  color: var(--color-tertiary);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.AbExtras__Interests--content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  place-items: center;
+  grid-row-gap: 6rem;
+}
+
+.AbExtras__Interests--content__circle {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 0.2rem #283c86 solid;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.AbExtras__Interests--content .AbExtras__Interests--img-1 {
+  background-image: url("./../images/interests/1.gif");
+}
+
+.AbExtras__Interests--content .AbExtras__Interests--img-2 {
+  background-image: url("./../images/interests/2.svg");
+}
+
+.AbExtras__Interests--content .AbExtras__Interests--img-3 {
+  background-image: url("./../images/interests/3.svg");
 }
 
 .AbFooter {
   grid-column: container-start / container-end;
   background-color: var(--color-tertiary);
-  height: 200px;
+  padding: 2rem 0;
+}
+
+.AbFooter__content {
+  padding: 1rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 @keyframes box-1 {
