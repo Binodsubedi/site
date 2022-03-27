@@ -134,7 +134,13 @@ a:hover {
   background-color: var(--color-tertiary);
   display: grid;
   grid-template-rows: 14rem calc(100% - 14rem);
-  padding: 5rem 3rem;
+  padding: 5rem 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .AbProgrammingLang {
+    padding: 5rem 0;
+  }
 }
 
 .AbProgrammingLang__title {
@@ -234,13 +240,25 @@ a:hover {
   padding: 2rem 0;
 }
 
+@media screen and (max-width: 400px) {
+  .AbExperience {
+    font-size: 4rem;
+  }
+}
+
 .AbExperience__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 4rem;
   place-items: center;
-  padding: 6rem 2vw 6rem 5vw;
+  padding: 6rem 2vw 6rem 2vw;
+}
+
+@media screen and (max-width: 400px) {
+  .AbExperience__content {
+    padding: 6rem 0;
+  }
 }
 
 .AbExperience__content--singles {
@@ -260,6 +278,12 @@ a:hover {
   object-fit: cover;
   margin-right: 2rem;
   position: relative;
+}
+
+@media screen and (max-width: 400px) {
+  .AbExperience__content--singles__img {
+    margin-right: 1rem;
+  }
 }
 
 .AbExperience__content--singles__box {
