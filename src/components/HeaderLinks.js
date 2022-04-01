@@ -4,6 +4,7 @@ import AboutMe from './AboutMe';
 import Login from './Login';
 import Blog from './Blog';
 import Dashboard from './Dashboard';
+import NotFound from './NotFound';
 
 const HeaderLinks = () => {
   return (
@@ -14,6 +15,7 @@ const HeaderLinks = () => {
           <Route path="/About-me" element={<AboutMe />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
 
