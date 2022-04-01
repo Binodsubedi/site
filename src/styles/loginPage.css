@@ -1,0 +1,54 @@
+body, .header {
+  height: 100vh;
+  width: 100vw;
+}
+
+.LoginPage {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0.4rem blueviolet solid;
+}
+
+.LoginPage__Username {
+  display: flex;
+  width: 20vw;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.LoginPage__Username label {
+  font-size: 2.5vw;
+  padding: 1rem;
+}
+
+.LoginPage__Username input {
+  padding: 1rem;
+  font-size: 2vw;
+}
+
+.LoginPage__Password {
+  display: flex;
+  width: 20vw;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.LoginPage__Password label {
+  font-size: 2.5vw;
+  padding: 1rem;
+}
+
+.LoginPage__Password input {
+  padding: 1rem;
+  font-size: 2vw;
+}
+
+.LoginPage .Submit_btn {
+  padding: 1vh 2vw;
+  font-size: 1.8vw;
+  margin-left: 10vw;
+}
+/*# sourceMappingURL=loginPage.css.map */
