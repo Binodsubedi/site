@@ -52,13 +52,12 @@ a:hover {
 .BlogMain {
   grid-column: container-start / container-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
   place-items: center;
 }
 
 .BlogMain__inner {
   display: grid;
-  grid-template-rows: 2fr 0.5fr 1fr;
+  grid-template-rows: 1fr 10rem min-content;
   padding: 5vw;
   place-items: center;
 }
@@ -76,6 +75,11 @@ a:hover {
   font-size: calc(1.5rem + 2.5vw);
   line-height: 0.9rem;
   letter-spacing: 0.6rem;
+}
+
+.BlogMain__inner--para {
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .AbFooter {
